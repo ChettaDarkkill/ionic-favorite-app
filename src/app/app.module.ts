@@ -4,13 +4,26 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
+//import Pages for register
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { FavoritesPage } from '../pages/favorites/favorites';
+import { LibraryPage } from '../pages/library/library';
+import { QuotesPage } from '../pages/quotes/quotes';
+import { QuotePage } from '../pages/quote/quote';
+import { SettingsPage } from '../pages/settings/settings';
+import { TabsPage } from '../pages/tabs/tabs';
+//import Services
+import { QuotesService } from '../services/quotes';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    FavoritesPage,
+    LibraryPage,
+    QuotesPage,
+    QuotePage,
+    SettingsPage,
+    TabsPage
   ],
   imports: [
     BrowserModule,
@@ -19,12 +32,18 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    FavoritesPage,
+    LibraryPage,
+    QuotesPage,
+    QuotePage,
+    SettingsPage,
+    TabsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    QuotesService
   ]
 })
 export class AppModule {}
