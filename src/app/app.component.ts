@@ -29,7 +29,7 @@ export class MyApp {
     });
   }
 
-  onload(page: any){
+  onLoad(page: any){
     this.nav.setRoot(page);
     this.menuCtrl.close();
   }
